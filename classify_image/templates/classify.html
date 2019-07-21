@@ -1,0 +1,100 @@
+{% load staticfiles %}
+<html>
+
+<head>
+  <title>Image Classification</title>
+  <link rel="stylesheet" href="{% static 'css/classify.css' %}" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+  <script src="{% static 'js/classify.js' %}"></script>
+    <link rel="icon" href="{% static 'js/icon.png' %}">
+</head>
+    
+
+<body>
+    <div class="header">
+    <h3> Plant Disease Multi-Classifier</h3>
+    </div>
+  <div class="container row main-container">
+      
+    <div class="col s12 dd-container">
+        
+      <div class="card dd-card">
+          <img src="{% static 'js/PotatoPlant.png' %}" class="leaf" height="200" width="150" />
+          
+              
+        <div class="card-content black-text file-field">
+          <div id="drop-container">
+            
+            <span class="drag-txt"><b>DRAG + DROP IMAGE HERE</b></span>
+            <span class="or-txt">OR</span>
+            <form action="#">
+              <div class="waves-effect waves-light btn" id="browse-container">
+                <span>BROWSE FILES</span>
+                <input type="file" id="browse-button" accept="image/*">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 uf-container">
+      <div class="card uf-card">
+        <img class="card crop" id="img-card" />
+      </div>
+      <div class="waves-effect waves-light btn" id="upload-button">
+        <span>UPLOAD + DETECT</span>
+      </div>
+      <div class="waves-effect waves-light btn" id="go-back">
+        <span>GO BACK</span>
+      </div>
+    </div>
+    <div class="col s12 dt-container">
+      <div class="card dt-card" id="stat-table">
+      </div>
+      <div class="waves-effect waves-light btn" id="go-start">
+        <span>GO BACK</span>
+      </div>
+    </div>
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <div style="width: 100%; overflow: hidden;">
+          <div style="width: 100px; float: left;">
+            <div class="preloader-wrapper big active">
+              <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                  <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="loading-text">
+            <h5>Loading...</h5></div>
+        </div>
+      </div>
+    </div>
+<div class="rectangle">
+<h4>ABOUT</h4>
+    
+    
+    
+    
+    </div>
+      <div class="Paragraph">
+      <p>The Inception v3 architecture uses centric transfer learning along with pre-configured model biases and weights for rapid feature extraction and compact multi-classification training. By manipulating a supplementary Imagenet feature extractor, a Softmax activation output node can be retrained with biases over over 1000 varied classes. This web application uses a combined Python Django + Tensorflow model instance to diagnose over 16 critical superficial blights and crop disease, frequently deleterious to agricultural output.<br> <br> This project had been modified through utilizing existing open-source templates in order to implement plant disease detection in a user-friendly web application as part of Kaggle's PlantVillage dataset classification challenge.
+          
+          </p>
+    
+    </div>
+      
+</body>
+
+</html>
